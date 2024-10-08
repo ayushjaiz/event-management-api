@@ -56,17 +56,18 @@ Install dependencies
   npm install
 ```
 
+Migrate database
+
+```bash
+  npm run db:push
+```
+
 Start the server
 
 ```bash
   npm run start
 ```
 
-Migrate database
-
-```bash
-  npm run db:push
-```
 
 
 ## Environment Variables
@@ -88,9 +89,6 @@ JWT_SECRET_KEY =
 EMAIL_ADMIN = 
 EMAIL_PASSWORD = 
 ```
-## File Structure
-
-![alt text](image.png)
 
 ## Routes
 
