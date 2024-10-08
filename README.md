@@ -41,13 +41,13 @@ To run this project locally, Node and Postgres must be installed in the system.
 Clone the project
 
 ```bash
-  git clone https://github.com/ayushjaiz/event-management system
+  git clone https://github.com/ayushjaiz/event-management-system
 ```
 
 Go to the project directory
 
 ```bash
-  cd event-management system
+  cd event-management-system
 ```
 
 Install dependencies
@@ -60,6 +60,12 @@ Start the server
 
 ```bash
   npm run start
+```
+
+Migrate database
+
+```bash
+  npm run db:push
 ```
 
 
