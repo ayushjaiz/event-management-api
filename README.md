@@ -23,11 +23,6 @@ This project involves event management system within a Node.js environment, usin
    - Users can view the list of confirmed participants and those on the waitlist for any event.
    - If a user on the confirmed list cancels their participation, the next user on the waitlist is automatically moved to the confirmed list (if space is available).
 
-4. **Error Handling**
-   - The system provides clear error messages in the following cases:
-     - The confirmed list is full (i.e., when the number of participants reaches `totalSeats`).
-     - A user tries to remove someone who is not on the confirmed list or waitlist.
-
 ## Tools Used
 
 ##### `VSCode` : Code Editor
