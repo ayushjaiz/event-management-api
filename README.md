@@ -36,13 +36,13 @@ To run this project locally, Node and Postgres must be installed in the system.
 Clone the project
 
 ```bash
-  git clone https://github.com/ayushjaiz/event-management-system
+  git clone https://github.com/ayushjaiz/event-management-api
 ```
 
 Go to the project directory
 
 ```bash
-  cd event-management-system
+  cd event-management-api
 ```
 
 Install dependencies
