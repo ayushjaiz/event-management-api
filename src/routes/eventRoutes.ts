@@ -1,5 +1,3 @@
-// src/routes/eventRoutes.ts
-
 import { response, Router } from 'express';
 import { Request, Response } from 'express';
 import EventController from '../controllers/EventController';

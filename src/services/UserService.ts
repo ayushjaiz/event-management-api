@@ -1,12 +1,8 @@
-// src/services/UserService.ts
-
-import { PrismaClient, Role } from '@prisma/client';
+import { Role } from '@prisma/client';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
+import prisma from '../config/db';
 
-const prisma = new PrismaClient();
-
-// Secret key for JWT (should be stored securely, e.g., in environment variables)
 const JWT_SECRET = process.env.JWT_SECRET || 'your_jwt_secret_key';
 
 class UserService {

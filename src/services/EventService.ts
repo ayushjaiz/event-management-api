@@ -1,12 +1,6 @@
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
+import prisma from "../config/db";
 
 class EventService {
-  /**
-   * Creates a new event.
-   * @returns The created event
-   */
   async createEvent(title: string, description: string, date: Date, totalSeats: number, createdById: number) {
 
     const event = await prisma.event.create({
@@ -22,10 +16,6 @@ class EventService {
     return event;
   }
 
-  /**
-   * Retrieves all events.
-   * @returns A list of events
-   */
   async getAllEvents() {
     const events = await prisma.event.findMany({
       include: {
@@ -40,11 +30,6 @@ class EventService {
     return events;
   }
 
-  /**
-   * Retrieves an event by ID.
-   * @param id - Event's ID
-   * @returns The event object
-   */
   async getEventById(id: number) {
     const event = await prisma.event.findUnique({
       where: { id },

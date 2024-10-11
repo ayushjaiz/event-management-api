@@ -1,13 +1,8 @@
-// src/app.ts
-
-import express, { NextFunction, Response } from 'express';
+import express from 'express';
 import userRoutes from './routes/userRoutes';
 import eventRoutes from './routes/eventRoutes';
 import participantRoutes from './routes/participantRoutes';
-import dotenv from 'dotenv';
 import cors from 'cors';
-
-dotenv.config();
 
 const app = express();
 app.use(cors());

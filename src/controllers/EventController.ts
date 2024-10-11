@@ -23,9 +23,6 @@ class EventController {
     }
   };
 
-  /**
-   * Retrieves all events.
-   */
   async getAllEvents(req: Request, res: Response) {
     try {
       const events = await EventService.getAllEvents();
@@ -36,9 +33,6 @@ class EventController {
     }
   };
 
-  /**
-   * Retrieves an event by ID.
-   */
   async getEventById(req: Request, res: Response) {
     try {
       const { id } = req.params;

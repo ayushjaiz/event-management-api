@@ -1,16 +1,10 @@
-// src/services/ParticipantService.ts
-
-import { PrismaClient, Status } from '@prisma/client';
+import { Status } from '@prisma/client';
 import EventService from './EventService';
 import EmailService from '../utils/EmailService';
 
-const prisma = new PrismaClient();
+import prisma from '../config/db';
 
 class ParticipantService {
-  /**
-   * Registers a participant for an event.
-   * @returns The created participant
-   */
   async registerParticipant(userId: number, eventId: number) {
     try {
       const result = await prisma.$transaction(async (tx) => {
@@ -75,9 +69,6 @@ class ParticipantService {
     }
   }
 
-  /**
-   * Cancels a participant's registration.
-   */
   async cancelRegistration(participantId: number) {
     try {
       const participant = await prisma.participant.findUnique({
@@ -139,18 +130,12 @@ class ParticipantService {
     }
   }
 
-  /**
-   * Gets participant details from participant id
-   */
   async getParticipantById(participantId: number) {
     return prisma.participant.findUnique({
       where: { id: participantId },
     });
   }
 
-  /**
-   * Gets all participant details by event id
-   */
   async getAllParticipantsByEventId(eventId: number) {
     return prisma.participant.findMany({
       where: {

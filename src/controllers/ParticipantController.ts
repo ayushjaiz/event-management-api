@@ -1,14 +1,9 @@
-// src/controllers/ParticipantController.ts
-
 import { NextFunction, Request, Response } from 'express';
 import ParticipantService from '../services/ParticipantService';
 import { Role } from '@prisma/client';
 
 export class ParticipantController {
 
-  /**
-   * Handles participant registration.
-   */
   async registerParticipant(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
       const { eventId } = req.body;
@@ -26,13 +21,10 @@ export class ParticipantController {
       // Send the response, but don't return it
       res.status(201).json({ message: 'User registered', result });
     } catch (error) {
-      next(error); // Pass the error to the global error handler
+      next(error);
     }
   }
 
-  /**
-   * Handles participant cancellation.
-   */
   async cancelRegistration(req: Request, res: Response) {
     try {
       const { participantId } = req.params;

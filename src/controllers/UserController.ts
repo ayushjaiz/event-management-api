@@ -1,13 +1,8 @@
-// src/controllers/UserController.ts
-
 import { Request, Response } from 'express';
 import UserService from '../services/UserService';
 
 export class UserController {
 
-  /**
-   * Handles user registration.
-   */
   async register(req: Request, res: Response) {
     try {
       const { name, email, password, role } = req.body;
@@ -25,9 +20,6 @@ export class UserController {
     }
   };
 
-  /**
-   * Handles user login.
-   */
   async login(req: Request, res: Response) {
     try {
       const { email, password } = req.body;
@@ -45,9 +37,6 @@ export class UserController {
     }
   };
 
-  /**
-   * Retrieves a user by ID.
-   */
   async getUserById(req: Request, res: Response) {
     try {
       const { id } = req.params;
@@ -60,9 +49,6 @@ export class UserController {
     }
   };
 
-  /**
-   * Updates a user's information.
-   */
   async updateUser(req: Request, res: Response) {
     try {
       const { id } = req.params;
@@ -76,9 +62,6 @@ export class UserController {
     }
   };
 
-  /**
-   * Deletes a user by ID.
-   */
   async deleteUser(req: Request, res: Response) {
     try {
       const { id } = req.params;
